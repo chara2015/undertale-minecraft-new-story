@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "undertale-minecraft-new-story",
+	"version": "${version}",
+	"name": "Undertale: Minecraft-New story",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"chara201x"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/undertale-minecraft-new-story/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.umn.UndertaleMinecraftNewStory"
+		],
+		"client": [
+			"com.umn.UndertaleMinecraftNewStoryClient"
+		]
+	},
+	"mixins": [
+		"undertale-minecraft-new-story.mixins.json",
+		{
+			"config": "undertale-minecraft-new-story.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+        "cardinal-components-api": ">=5.2.2"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
